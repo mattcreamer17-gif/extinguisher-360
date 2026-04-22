@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Extinguisher 360 · A read on where the orchestration layer goes next</title>
+<meta name="description" content="Matt Creamer, Eduba. I pulled up your Goya Foods DR reference on the walk over. The thing eating your week is not the monthly inspection product. It is figuring out which adjacent asset to ship next without fragmenting the rule engine." />
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brandmark" href="https://extinguisher360.com/" target="_blank" rel="noopener" aria-label="Extinguisher 360 home">
+      <img src="logo.png" alt="Extinguisher 360" />
+    </a>
+    <div class="top-meta">
+      <span class="dot" aria-hidden="true"></span>
+      <span>For Eduardo &amp; team · eMerge Americas · Booth SS19</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">A private note, prepared for Extinguisher <span class="red">360</span></p>
+    <h1>A read on where Extinguisher <span class="red">360</span>'s orchestration layer goes next.</h1>
+    <p class="lede">One page. Written after reading your site, your Sazón reference, your pitch-circuit coverage, and your app listings. Built to be useful in about four minutes.</p>
+    <div class="hero-tags">
+      <span class="tag">NFPA 10</span>
+      <span class="tag">QR inspections</span>
+      <span class="tag">Facilities compliance</span>
+      <span class="tag">LATAM · US</span>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap proof-grid">
+    <div class="proof-item">
+      <div class="k">$1.49</div>
+      <div class="v">per extinguisher, per month. The price that reshapes the category.</div>
+    </div>
+    <div class="proof-item">
+      <div class="k">Sazón, Inc.</div>
+      <div class="v">Goya Foods DR named in your public references.</div>
+    </div>
+    <div class="proof-item">
+      <div class="k">3 pitch wins</div>
+      <div class="v">Harvard Angels South Florida 2025, AMCHAM DR 2024, Volcano Summit Startup Avenue.</div>
+    </div>
+    <div class="proof-item">
+      <div class="k">iOS + Android</div>
+      <div class="v"><a href="https://apps.apple.com/us/app/extinguisher360/id6462470501" target="_blank" rel="noopener">Live on the App Store</a>. Google Play shipped.</div>
+    </div>
+  </div>
+</section>
+
+<section class="body">
+  <div class="wrap body-inner">
+
+    <h2>The product works. The question is what it becomes.</h2>
+
+    <p>Extinguisher 360 turned NFPA 10 monthly inspections into a $1.49-per-unit-per-month app, locked in a reference like Sazón (Goya Foods DR), and collected pitch wins at Harvard Angels, AMCHAM DR, and Volcano Summit. The next question is the one that decides whether this becomes a fire extinguisher app or a facilities compliance platform. When you add emergency lights, exit signs, AED units, and fire doors, where does the rule engine live, where does the per-jurisdiction override live, and where does the customer-specific template live.</p>
+
+    <h2>How we would frame your stack.</h2>
+
+    <div class="stack">
+      <div class="stack-row">
+        <div class="stack-label"><span class="pct">60<small>%</small></span><span class="pct-tag">Traditional</span></div>
+        <div class="stack-copy">
+          <h3>Database and form work.</h3>
+          <p>Assets, inspections, timestamps, photo storage, reporting. This is Postgres territory. Fast, cheap, boring, reliable. This is most of what you already built.</p>
+        </div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-label"><span class="pct">30<small>%</small></span><span class="pct-tag">Rule-based</span></div>
+        <div class="stack-copy">
+          <h3>Checklists and compliance logic.</h3>
+          <p>NFPA 10 today. NFPA 25 for sprinklers next. Local codes in each LATAM market. Insurance-carrier-specific checklists for any channel partnership. Deterministic logic. Not a job for an LLM.</p>
+        </div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-label"><span class="pct">10<small>%</small></span><span class="pct-tag">Real AI</span></div>
+        <div class="stack-copy">
+          <h3>Where AI earns its keep.</h3>
+          <p>Photo-based damage detection. Anomaly flagging across inspection history. A template-generation layer that lets a partner stand up a new asset type without your engineers in the loop.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="aside">If those three layers are cleanly separated, the product scales to multi-asset without fragmenting. If they are tangled, every new asset type is a fresh engineering sprint, and the burn rate spikes right as you go to raise.</p>
+
+    <h2>We have run this pattern before.</h2>
+
+    <p>VigilOre, a compliance platform in Democratic Republic of Congo mining. A different vertical. Same shape of problem: rules heavy, document heavy, jurisdiction heavy. The engagement compressed 160 hours of compliance work into under five minutes of orchestrated output. Read that as "what the multi-asset version of your product looks like on a hard day."</p>
+
+    <p>The methodology behind the layer separation is <strong>Interpretable Context Methodology (ICM)</strong>, a folder-structure-as-agent-architecture framework submitted to ACM TiiS. Open source under MIT. It is useful here because the product architecture question you are going to face in 12 months is the one ICM was written to answer. Read the paper on <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">GitHub</a>.</p>
+
+    <h2>A few discovery questions we would bring.</h2>
+
+    <ol class="qs">
+      <li>When a customer asks for emergency-light inspections alongside extinguishers, how long does it take to stand up a new checklist template, and who owns that inside a seven-person team.</li>
+      <li>For LATAM expansion, where does the per-country compliance rule live today. In the app, in a database config, or still in the founders' heads.</li>
+      <li>When you go out to raise, is the story "fire extinguisher SaaS" or "facilities compliance platform," and what has to be true in 12 months to make the second story defensible.</li>
+      <li>Who owns the insurance-carrier channel conversation, and how far along is it.</li>
+    </ol>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta-inner">
+    <div class="cta-card">
+      <p class="cta-eyebrow">Next step</p>
+      <h2>30 minutes with Matt.</h2>
+      <p class="cta-copy">Bring the one product decision you want a second pair of eyes on before the next raise. No deck. No follow-up drip. One call, then we either fit or we do not.</p>
+      <p class="cta-line"><a class="btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book a 30-minute call</a></p>
+      <p class="cta-sig">Matt Creamer · CRO, Eduba</p>
+    </div>
+  </div>
+</section>
+
+<section class="kit">
+  <div class="wrap kit-inner">
+    <h2>For the walk back to your booth.</h2>
+    <ul class="links">
+      <li><a href="https://extinguisher360.com/" target="_blank" rel="noopener">extinguisher360.com</a> · your marketing site</li>
+      <li><a href="https://apps.apple.com/us/app/extinguisher360/id6462470501" target="_blank" rel="noopener">Extinguisher360 on the App Store</a></li>
+      <li><a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">ICM paper and repository</a> · MIT license</li>
+      <li><a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Calendar with Matt</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Prepared by Eduba, <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>. Scoped sprint engagements, orchestration layer design, and methodology transfer. Written for Extinguisher 360 Inc. after public-source research. No claim of endorsement.</p>
+  </div>
+</footer>
+
+</body>
+</html>
